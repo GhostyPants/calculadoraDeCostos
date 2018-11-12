@@ -4,8 +4,17 @@ from typing import Dict
 
 class Receta:
     def __init__(self, nombreReceta: str):
-        self.nombreReceta = nombreReceta
+        self._nombreReceta = nombreReceta
         self.ingredientes: Dict[str, Ingrediente] = {}
+
+    @property
+    def nombreReceta(self):
+        return self._nombreReceta
+
+    @nombreReceta.setter
+    def nombreReceta(self, nombreRecetaNuevo):
+        self._nombreReceta = nombreRecetaNuevo
+        return nombreRecetaNuevo
 
     def agregarIngredientes(
         self,
@@ -19,5 +28,5 @@ class Receta:
             nombreIngrediente, pesoReceta, medidaReceta, precioIngrediente, pesoDeCompra
         )
         self.ingredientes[nombreIngrediente] = ing
-        print(self.ingredientes[nombreIngrediente]._nombreIngrediente)
+        print(self.ingredientes[nombreIngrediente].nombreIngrediente)
 

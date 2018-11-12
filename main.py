@@ -5,6 +5,8 @@ import os
 
 Recetario: Dict[str, Receta] = {}
 
+#
+
 
 def clearConsole():
     os.system("cls")
@@ -34,11 +36,9 @@ def crearReceta(recetario: Dict):
 
 def mostrarRecetas(recetario: Dict):
     i = 1
-    for clave, nombreReceta in recetario.items():
+    for clave, receta in recetario.items():
         print(
-            "{2})\n Clave: {0}\n Receta de: {1}".format(
-                clave, nombreReceta.nombreReceta, i
-            )
+            "{2})\n Clave: {0}\n Receta de: {1}".format(clave, receta.nombreReceta, i)
         )
         i += 1
 
