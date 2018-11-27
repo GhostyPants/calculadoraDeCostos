@@ -34,10 +34,10 @@ def crearReceta(recetario: Dict):
 def mostrarRecetas(recetario: Dict):
     i = 1
     for clave, receta in recetario.items():
-        if receta.costoReceta <= 0:
-            print("{2})\n Clave: {0}\n Receta de: {1}".format(clave, receta.nombreReceta, i))
+        if receta.costo <= 0:
+            print("{2})\n Clave: {0}\n Receta de: {1}".format(clave, receta.nombre, i))
         else:
-            print("{2})\n Clave: {0}\n Receta de: {1}\n Costo de la receta: {3}".format(clave, receta.nombreReceta, i, receta.costoTotal))
+            print("{2})\n Clave: {0}\n Receta de: {1}\n Costo de la receta: {3}".format(clave, receta.nombre, i, receta.costo))
         i += 1
 
 

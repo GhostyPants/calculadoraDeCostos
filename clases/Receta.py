@@ -11,24 +11,25 @@ class Receta:
         self.__costoReceta = 0
 
     @property
-    def nombreReceta(self):
+    def nombre(self):
         return self.__nombreReceta
 
-    @nombreReceta.setter
-    def nombreReceta(self, nombreRecetaNuevo):
+    @nombre.setter
+    def nombre(self, nombreRecetaNuevo):
         self.__nombreReceta = nombreRecetaNuevo
         return nombreRecetaNuevo
 
     @property
-    def costoReceta(self):
+    def costo(self):
         return self.__costoReceta
 
-    @costoReceta.setter
-    def costoReceta(self, nombreRecetaNuevo):
-        self.__costoReceta = nombreRecetaNuevo
-        return nombreRecetaNuevo
+    @costo.setter
+    def costo(self, costoRecetaNuevo):
+        self.__costoReceta = costoRecetaNuevo
+        return costoRecetaNuevo
 
-    def mostrarIngredientes(self):
+    @property
+    def ingredientes(self):
         for clave, ingrediente in self.__ingredientes.items():
             ingredienteActual = self.__ingredientes[clave]
             print('''
